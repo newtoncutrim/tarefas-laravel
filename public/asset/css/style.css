@@ -1,10 +1,18 @@
 * {
     padding: 0px;
     border: 0px;
+    font-family: 'Rubik', sans-serif;
+}
+:root {
+    --backgroung-ligt: #F0F2Fa;
+    --backgroung-white: #F6F5FF;
+    --color-primary: #6143FF;
+    --text-dark: #0A0040;
 }
 
 body {
     width: 100vw;
     height: 100vh;
-    background-color: red;
+    background-color: var(--backgroung-white);
+    color: var(--text-dark);
 }
