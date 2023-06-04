@@ -1,7 +1,11 @@
 * {
     padding: 0px;
     border: 0px;
+    margin: 0px;
     font-family: 'Rubik', sans-serif;
+}
+a.btn {
+    text-decoration: none;
 }
 :root {
     --backgroung-ligt: #F0F2Fa;
@@ -15,6 +19,122 @@ body {
     height: 100vh;
     background-color: var(--backgroung-white);
     color: var(--text-dark);
-    
-    pp
+
+}
+
+.container {
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.sidebar {
+    width: 100px;
+    background-color: var(--color-primary);
+}
+
+nav {
+    height: 100px;
+    background-color: var(--backgroung-ligt);
+    width: calc(100vw - 100px);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 20px;
+}
+
+.btn {
+    padding: 20px 30px;
+    border-radius: 10px;
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+main {
+    display: flex;
+    padding: 20px;
+}
+
+section.graph {
+    padding: 5px;
+    width: 33%;
+    height: 100%;
+}
+
+.graph_header{
+    display: flex;
+    justify-content: space-between;
+}
+
+h2 {
+    flex: 1;
+    display: inline-block;
+}
+hr.linhaHeader{
+
+    width: 130px;
+
+}
+.graph_header_subititle{
+    margin-top: 10px;
+}
+
+.graph_placeholder{
+    background-color: #e2e2e2;
+    width: 300px;
+    height: 300px;
+    margin-top: 20px;
+    margin-left: 35px;
+}
+.graph_header-tasks_left{
+    margin-top: 10px;
+    text-align: center;
+}
+.lista {
+    flex: 1;
+    padding: 5px 15px;
+}
+.list-header{
+    display: flex;
+}
+.list-header-select{
+
+}
+.task-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: teal;
+    margin-top: 20px;
+
+}
+
+.task {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0px 5px;
+}
+
+.title {
+    align-items: center;
+    display: flex;
+    flex: 1;
+
+}
+.priority, .actions {
+    flex: 1;
+}
+.actions{
+    display: flex;
+    justify-content: flex-end;
+}
+.task_title{
+    padding-left: 10px;
+    font-weight: bold;
 }
