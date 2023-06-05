@@ -33,6 +33,9 @@ body {
     width: 100px;
     background-color: var(--color-primary);
 }
+.sidebar img {
+    max-width: 100%;
+}
 
 nav {
     height: 100px;
@@ -68,16 +71,26 @@ section.graph {
 .graph_header{
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 h2 {
-    flex: 1;
+    flex: 2;
+    font-size: 18px;
     display: inline-block;
 }
-hr.linhaHeader{
-
-    width: 130px;
-
+.graph_header_date {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.graph_header_line{
+    flex: 3;
+    margin-right: 15px;
+    width: 100px;
+    background-color: rgba(0, 0, 0, .20);
+    height: 2px;
 }
 .graph_header_subititle{
     margin-top: 10px;
@@ -89,10 +102,15 @@ hr.linhaHeader{
     height: 300px;
     margin-top: 20px;
     margin-left: 35px;
+    background: url('/asset/images/graph.png');
+    background-size: contain;
 }
-.graph_header-tasks_left{
-    margin-top: 10px;
-    text-align: center;
+.tasks_left_footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
 }
 .lista {
     flex: 1;
@@ -108,17 +126,22 @@ hr.linhaHeader{
     display: flex;
     flex-direction: column;
     width: 100%;
-    background-color: teal;
     margin-top: 20px;
 
 }
 
 .task {
+    margin-top: 10px;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
-    padding: 0px 5px;
+    justify-content: space-between;
+    padding: 30px 15px;
+    border-bottom: 1px solid var(--backgroung-ligt);
+
+}
+.task:hover {
+    background-color: var(--backgroung-ligt);
 }
 
 .title {
@@ -128,13 +151,28 @@ hr.linhaHeader{
 
 }
 .priority, .actions {
+    display: flex;
+    flex-direction: row;
     flex: 1;
 }
 .actions{
     display: flex;
     justify-content: flex-end;
 }
+.actions a {
+    margin-left: 20px;
+    margin-right: 10px;
+}
 .task_title{
     padding-left: 10px;
     font-weight: bold;
+}
+.sphere {
+    width: 22px;
+    height: 22px;
+    background-color: red;
+    border-radius: 50%;
+    margin-right: 10px;
+    align-items: center;
+
 }

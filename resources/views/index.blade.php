@@ -14,7 +14,7 @@
 <body>
     <div class="container">
         <div class="sidebar">
-            logo
+            <img src="/asset/images/logo.png" alt="">
         </div>
         <div class="content">
             <nav>
@@ -24,8 +24,11 @@
                 <section class="graph">
                     <div class="graph_header">
                         <h2>Progresso do dia</h2>
-                        <hr class="linhaHeader"/>
-                        Data
+                        <div class="graph_header_line">
+                        </div>
+                        <div class="date_componet">
+                            Data
+                        </div>
                     </div>
                     <div class="graph_header_subititle">
                         Tarefas: 3/6
@@ -33,7 +36,11 @@
                     <div class="graph_placeholder">
 
                     </div>
-                    <p class="graph_header-tasks_left">Restam 3 tarefas a serem realizadas</p>
+                    <div class="tasks_left_footer">
+                        <img src="/asset/images/icon-info.png" alt="">
+                        Restam 3 tarefas a serem realizadas
+                    </div>
+
                 </section>
                 <section class="lista">
                     <div class="list-header">
@@ -52,7 +59,30 @@
                                 <div>Titulo da tarefa</div>
                             </div>
                             <div class="actions">
-                                Editar - Excluir
+                                <a href="#">
+                                    <img src="/asset/images/icon-edit.png" alt="">
+                                </a>
+                                <a href="#">
+                                    <img src="/asset/images/icon-delete.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="task">
+                            <div class="title">
+                                <input type="checkbox">
+                                <div class="task_title">Titulo da tarefa</div>
+                            </div>
+                            <div class="priority">
+                                <div class="sphere"></div>
+                                <div>Titulo da tarefa</div>
+                            </div>
+                            <div class="actions">
+                                <a href="#">
+                                    <img src="/asset/images/icon-edit.png" alt="">
+                                </a>
+                                <a href="#">
+                                    <img src="/asset/images/icon-delete.png" alt="">
+                                </a>
                             </div>
                         </div>
                     </div>
