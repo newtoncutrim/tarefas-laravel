@@ -4,11 +4,9 @@
     margin: 0px;
     font-family: 'Rubik', sans-serif;
 }
-a.btn {
-    text-decoration: none;
-}
+
 :root {
-    --backgroung-ligt: #F0F2Fa;
+    --backgroung-ligt: #dfe4f7;
     --backgroung-white: #F6F5FF;
     --color-primary: #6143FF;
     --text-dark: #0A0040;
@@ -50,8 +48,14 @@ nav {
 .btn {
     padding: 20px 30px;
     border-radius: 10px;
+    transition: all .3s ease-in-out;
 }
-
+a.btn {
+    text-decoration: none;
+}
+.btn:hover {
+    transform: scale(1.05);
+}
 .btn-primary {
     background-color: var(--color-primary);
     color: white;
@@ -59,11 +63,11 @@ nav {
 
 main {
     display: flex;
-    padding: 20px;
+    padding: 0px;
 }
 
 section.graph {
-    padding: 5px;
+    padding: 20px 20px 0px 20px;
     width: 33%;
     height: 100%;
 }
@@ -84,6 +88,7 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 9px;
 }
 .graph_header_line{
     flex: 3;
@@ -97,6 +102,7 @@ h2 {
 }
 
 .graph_placeholder{
+    flex: 1;
     background-color: #e2e2e2;
     width: 300px;
     height: 300px;
@@ -111,16 +117,20 @@ h2 {
     align-items: center;
     justify-content: center;
     margin-top: 20px;
+    flex: 1;
 }
 .lista {
     flex: 1;
-    padding: 5px 15px;
+    padding: 20px 20px 0px 20px;
 }
 .list-header{
     display: flex;
 }
 .list-header-select{
-
+    background-color: transparent;
+    border: 0;
+    font-size: 18px;
+    color: var(--text-dark);
 }
 .task-list {
     display: flex;
@@ -131,6 +141,7 @@ h2 {
 }
 
 .task {
+    margin-right: 10px;
     margin-top: 10px;
     display: flex;
     flex-direction: row;
@@ -138,10 +149,14 @@ h2 {
     justify-content: space-between;
     padding: 30px 15px;
     border-bottom: 1px solid var(--backgroung-ligt);
+    transition: all .3s ease-in-out;
 
 }
 .task:hover {
+    transform: scale(1.05);
+    border-radius: 10px;
     background-color: var(--backgroung-ligt);
+    overflow: hidden;
 }
 
 .title {
@@ -160,8 +175,12 @@ h2 {
     justify-content: flex-end;
 }
 .actions a {
+    transition: all .3s ease-in-out;
     margin-left: 20px;
     margin-right: 10px;
+}
+.actions a:hover{
+    transform: scale(1.50);
 }
 .task_title{
     padding-left: 10px;
