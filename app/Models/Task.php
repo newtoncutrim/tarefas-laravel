@@ -14,7 +14,8 @@ class Task extends Model
         'due_date',
         'description',
         'user_id',
-        'category_id'
+        'category_id',
+        'is_done'
     ];
 
     public function user(){

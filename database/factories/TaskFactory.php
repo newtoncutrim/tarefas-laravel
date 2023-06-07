@@ -29,7 +29,8 @@ class TaskFactory extends Factory
             'due_date' => fake()->dateTime(),
             'description' => fake()->text(40),
             'user_id' => $user,
-            'category_id' => $user->categories->random()
+            'category_id' => $user->categories->random(),
+            'is_done' => fake()->boolean()
         ];
     }
 }
