@@ -13,10 +13,10 @@
             <div>{{$data['category']}}</div>
         </div>
         <div class="actions">
-            <a href="#">
+            <a href="{{$data['edit_url'] ?? ''}}">
                 <img src="/asset/images/icon-edit.png" alt="">
             </a>
-            <a href="#">
+            <a href="{{$data['delete_url'] ?? ''}}">
                 <img src="/asset/images/icon-delete.png" alt="">
             </a>
         </div>

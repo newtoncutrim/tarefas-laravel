@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\SiteController;
+use App\Http\Controllers\TaskController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,12 +16,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', [SiteController::class, 'index'])->name('home');
+Route::get('/task/new', [TaskController::class, 'create'])->name('task.create');
+Route::get('/task', [TaskController::class, 'show'])->name('task.show');
 
-Route::get('/login', function () {
-    return view('login');
-});
+Route::get('/login',[AuthController::class, 'login'])->name('login');
+Route::get('/register', [AuthController::class, 'register'])->name('register');
 
 
