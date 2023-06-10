@@ -20,7 +20,12 @@ class TaskController extends Controller
 
     public function create_action(Request $r, Task $t)
     {
+
         $data = $r->only(['title', 'due_date', 'category_id', 'description']);
+
+        $data['is_done'] = $r->is_done ? true : false;
+
+
         $data['user_id'] = 1;
         $result = $t->create($data);
         $result->save();
@@ -44,11 +49,31 @@ class TaskController extends Controller
 
     }
 
-    public function edit_action(Request $r){
-        return 'ok';
+    public function edit_action(Request $r, Task $task){
+        $data = $r->only(['title', 'due_date', 'category_id', 'description']);
+
+        $data['is_done'] = $r->is_done ? true : false;
+
+        $tas = $task->find($r->id);
+        if(!$tas){
+            return redirect(route('home'));
+        }
+
+        $tas->update($data);
+        $tas->save();
+
+        return redirect(route('home'));
     }
 
-    public function delete(Request $r){
+    public function delete(Request $r, Task $task){
+        $id = $r->id;
+        $data = $task->find($id);
+
+        if($data){
+            $data->delete();
+        }
+
         return redirect(route('home'));
+
     }
 }
