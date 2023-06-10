@@ -23,8 +23,6 @@ class TaskController extends Controller
 
         $data = $r->only(['title', 'due_date', 'category_id', 'description']);
 
-        $data['is_done'] = $r->is_done ? true : false;
-
 
         $data['user_id'] = 1;
         $result = $t->create($data);

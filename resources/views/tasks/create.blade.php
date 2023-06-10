@@ -19,7 +19,6 @@
                 @endforeach
             </x-form.select_input>
 
-            <x-form.check name="is_done" label="Tarefa Realizada?" checked="{{}}"/>
 
             <x-form.textArea_input name="description" label="Descrição da Tarefa" placeholder="Digite a descrição da Tarefa"/>
 

@@ -1,13 +1,13 @@
 <x-layout>
-
     <x-slot:btn>
         <a href="{{route('task.new')}}" class="btn btn-primary">Criar tarefa</a>
 
     </x-slot:btn>
 
+
     <section class="graph">
         <div class="graph_header">
-            <h2>Progresso do dia</h2>
+            <h2>Progresso do dia - {{$authUser->name}}</h2>
             <div class="graph_header_line">
             </div>
             <div class="graph_header_date">
