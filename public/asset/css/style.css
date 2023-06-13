@@ -62,7 +62,10 @@ a.btn {
     background-color: var(--color-primary);
     color: white;
 }
-
+.btn-danger{
+    background-color: red;
+    color: white;
+}
 main {
     display: flex;
     padding: 0px;

@@ -11,7 +11,10 @@ class AuthController extends Controller
 {
 
     public function login(Request $r, User $user){
-        dd(Auth::user());
+        if(Auth::check()){
+            return redirect(route('home'));
+        }
+
         return view('login');
     }
 
@@ -21,6 +24,7 @@ class AuthController extends Controller
             'password' => 'required|min:6'
         ]);
 
+
         if(Auth::attempt($validade)){
             return redirect(route('home'));
         }
@@ -28,7 +32,15 @@ class AuthController extends Controller
     }
 
     public function register(){
+        if(Auth::check()){
+            return redirect(route('home'));
+        }
         return view('register');
+    }
+
+    public function logout(){
+        Auth::logout();
+        return redirect(route('login'));
     }
 
     public function register_action(Request $r, User $user){

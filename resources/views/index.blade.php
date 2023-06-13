@@ -2,6 +2,8 @@
     <x-slot:btn>
         <a href="{{route('task.new')}}" class="btn btn-primary">Criar tarefa</a>
 
+        <a href="{{route('user.logout')}}" class="btn btn-danger">Sair</a>
+
     </x-slot:btn>
 
 
