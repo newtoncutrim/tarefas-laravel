@@ -42,7 +42,33 @@
 
 
     </section>
+
+    <script>
+            async function updateTask(el){
+            let status = el.checked;
+            let taskId = el.dataset.id;
+            let url = '{{ route('taskUpdate') }}';
+
+            let rawResult = await fetch(url, {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json', 'accept': 'application/json',
+
+            },
+
+                body: JSON.stringify({status, taskId, _token: '{{ csrf_token() }}'})
+            });
+            let result = await rawResult.json();
+            console.log(result);
+
+            if(result.success){
+                window.alert('sucesso!');
+            } else {
+                el.checked = !status;
+            }
+
+        }
+    </script>
 </x-layout>
 
-{{-- ghuh<= --}}
 {{-- lucidchart --}}
+

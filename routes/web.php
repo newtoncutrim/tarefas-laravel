@@ -25,6 +25,7 @@ Route::middleware(['auth'])->group(function(){
     Route::get('/task/delete', [TaskController::class, 'delete'])->name('task.delete');
     Route::get('/logout', [AuthController::class, 'logout'])->name('user.logout');
     Route::get('/task', [TaskController::class, 'index'])->name('task.index');
+    Route::post('/taskUpdate', [TaskController::class, 'taskUpdate'])->name('taskUpdate');
 });
 
 

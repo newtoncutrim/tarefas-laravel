@@ -8,8 +8,12 @@ use Illuminate\Http\Request;
 
 class TaskController extends Controller
 {
-    public function index(){
+    public function taskUpdate(Request $r){
+        $task = Task ::findOrFail($r->taskId);
+        $task->is_done = $r->status;
+        $task->save();
 
+        return ['success' => true];
     }
 
     public function new(Request $r, Category $category){
