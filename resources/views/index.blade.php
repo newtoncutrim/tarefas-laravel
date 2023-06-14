@@ -54,12 +54,12 @@
     </section>
     <script>
         function FilterTask(el){
-            if(el.value == 'task_pen'){
+            if(el.value === 'task_pen'){
                 allTasks();
                 document.querySelectorAll('.task_done').forEach(element => {
                     element.style.display = 'none'
                 });
-            } else if (el.value == 'task_done') {
+            } else if (el.value === 'task_done') {
                 allTasks();
                 document.querySelectorAll('.task_pen').forEach(element => {
                     element.style.display = 'none'
