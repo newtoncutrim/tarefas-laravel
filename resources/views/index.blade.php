@@ -15,7 +15,15 @@
             <div class="graph_header_line">
             </div>
             <div class="graph_header_date">
-                Data
+                <a href="{{route('home', ['date' => $datePrev])}}">
+                    <img src="/asset/images/icon-prev.png">
+                </a>
+
+                    {{$date_string}}
+                <a href="{{route('home', ['date' => $dateNext])}}">
+                    <img src="/asset/images/icon-next.png">
+                </a>
+
             </div>
         </div>
         <div class="graph_header_subititle">
@@ -32,8 +40,10 @@
     </section>
     <section class="lista">
         <div class="list-header">
-            <select class="list-header-select">
-                <option value="1">Todas as tarefas</option>
+            <select class="list-header-select" onchange="FilterTask(this)">
+                <option value="all_task">Todas as tarefas</option>
+                <option value="task_pen">Tarefas Pendentes</option>
+                <option value="task_done">Tarefas Realizadas</option>
             </select>
         </div>
         @foreach ($tasks as $task)
@@ -42,7 +52,29 @@
 
 
     </section>
+    <script>
+        function FilterTask(el){
+            if(el.value == 'task_pen'){
+                allTasks();
+                document.querySelectorAll('.task_done').forEach(element => {
+                    element.style.display = 'none'
+                });
+            } else if (el.value == 'task_done') {
+                allTasks();
+                document.querySelectorAll('.task_pen').forEach(element => {
+                    element.style.display = 'none'
+                });
+            } else {
+                allTasks();
+            }
+        }
 
+        function allTasks(){
+            document.querySelectorAll('.task').forEach(element => {
+                element.style.display = 'block'
+            });
+        }
+    </script>
     <script>
             async function updateTask(el){
             let status = el.checked;
@@ -65,8 +97,8 @@
             } else {
                 el.checked = !status;
             }
-
         }
+
     </script>
 </x-layout>
 
