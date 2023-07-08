@@ -27,14 +27,14 @@
             </div>
         </div>
         <div class="graph_header_subititle">
-            Tarefas: 3/6
+            Tarefas: 1/2
         </div>
         <div class="graph_placeholder">
 
         </div>
         <div class="tasks_left_footer">
             <img src="/asset/images/icon-info.png" alt="">
-            Restam 3 tarefas a serem realizadas
+            Restam 1 tarefas a serem realizadas
         </div>
 
     </section>

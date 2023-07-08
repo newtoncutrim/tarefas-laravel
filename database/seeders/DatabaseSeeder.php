@@ -21,7 +21,7 @@ class DatabaseSeeder extends Seeder
 
         User::factory()->count(10)->create();
         Category::factory(20)->create();
-        Task::factory(20)->create();
+        Task::factory(10)->create();
 
         // \App\Models\User::factory(10)->create();
 
